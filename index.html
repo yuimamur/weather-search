@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+<body>
+    <div class="container">
+
+        <h1>Weather Information</h1>
+        <div class="input-forms">
+            <form id="coordinates-form">
+                <div class="form-group">
+                    <label for="lat-input">Latitude: </label>
+                    <input type="text" id="lat-input" placeholder="Enter latitude" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="lon-input">Longitude: </label>
+                    <input type="text" id="lon-input" placeholder="Enter longitude" class="form-control">
+                </div>
+                <button type="submit" class="btn btn-primary">Get Weather</button>
+            </form>
+        </div>
+        <div class="weather-card">
+            <div class="weather-icon">
+                <img id="weather-icon" src="images/sunny.png" alt="Weather Icon">
+            </div>
+            <div class="weather-details">
+                <p id="weather-description">Loading...</p>
+                <p id="temperature">Temperature: Loading...</p>
+                <p id="humidity">Humidity: Loading...</p>
+                <p id="country">Country: Loading...</p>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
