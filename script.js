@@ -4,9 +4,9 @@
 function setWeatherIcon(humidity) {
     const icon = document.getElementById('weather-icon');
     if (humidity < 50) {
-        icon.src = 'images/rainy.png'; // 低湿度のアイコン
+        icon.src = 'images/rainy.png'; // 雨のアイコン
     } else {
-        icon.src = 'images/cloudy.png'; // 高湿度のアイコン
+        icon.src = 'images/cloudy.png'; // 曇りのアイコン
     }
 }
 
@@ -26,7 +26,7 @@ document.getElementById('coordinates-form').addEventListener('submit', function 
         .then((data) => {
             console.log('API Response:', data);
             const weatherDescription = data.weather[0].description;
-            const temperature = (data.main.temp - 273.15).toFixed(2); // ケルビンを摂氏に変換
+            const temperature = (data.main.temp - 273.15).toFixed(2); 
             const humidity = data.main.humidity;
             const country = data.name;
             const weatherIcon = data.weather[0].icon; // アイコンコードを取得
@@ -38,7 +38,7 @@ document.getElementById('coordinates-form').addEventListener('submit', function 
             document.getElementById('country').textContent = `Country: ${country}`;
             document.getElementById('weather-icon').src = `http://openweathermap.org/img/wn/${weatherIcon}.png`;
 
-           // setWeatherIcon(humidity);
+           // setWeatherIcon(humidity); # images配下の画像を使う場合
         })
         .catch((error) => {
             console.error(error);
